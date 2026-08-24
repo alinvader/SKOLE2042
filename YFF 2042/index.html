@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>2042</title>
+  </head>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <title>Button</title>
+  <style>
+    body {
+      background-color: #3d3c3c;
+      text-align: center;
+      padding-top: 100px;
+    }
+    button {
+      background-color: transparent;
+      border: 2px solid #05e4b3;
+      color: #04f1be;
+      font-size: 20px;
+      padding: 12px 30px;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: 0.3s;
+      box-shadow: 0 0 8px #00ffc8;
+    }
+    button:hover {
+      background-color: #018a6c;
+      color: #0b0e11;
+      box-shadow: 0 0 20px #00ffc8, 0 0 40px #00ffc8;
+    }
+  </style>
+  <body>
+    <h1 style="color: aqua">OPERATING SYSTEM</h1>
+    <h2 style="color: aqua">Comparison</h2>
+    <button id="windowsButton">Windows</button>
+    <button id="appleButton">Apple</button>
+    <button id="linuxButton">Linux</button>
+
+    <ul id="windowsList" style="display: none; color: white">
+      <li>Windows 7</li>
+      <li>Windows 8</li>
+      <li>Windows 10</li>
+    </ul>
+    <ul id="appleList" style="display: none; color: white">
+      <li>Mac OS X</li>
+      <li>Mac OS Sierra</li>
+      <li>Mac OS Ventura</li>
+    </ul>
+    <ul id="linuxList" style="display: none; color: white">
+      <li>Ubuntu</li>
+      <li>Fedora</li>
+      <li>Debian</li>
+    </ul>
+
+    <script>
+      function toggleButton(buttonId, targetId) {
+        const selectedButton = document.getElementById(buttonId);
+        const selectedList = document.getElementById(targetId);
+        selectedButton.addEventListener("click", function () {
+          if (selectedList.style.display === "none") {
+            selectedList.style.display = "block";
+          } else {
+            selectedList.style.display = "none";
+          }
+        });
+      }
+      toggleButton("windowsButton", "windowsList");
+      toggleButton("appleButton", "appleList");
+      toggleButton("linuxButton", "linuxList");
+    </script>
+  </body>
+</html>
+ 
+ 

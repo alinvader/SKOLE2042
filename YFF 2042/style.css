@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "ModernRegular";
+  src: url("/fonts/font2042/ModernRegular.ttf") format("truetype");
+  font-weight: Regular;
+  font-style: Regular;
+}
+
+h1 {
+  font-family: "ModernRegular", sans-serif;
+}
+
+body {
+  background-image: url("images/background2042.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+h2 {
+  font-family: "ModernRegular", sans-serif;
+}
+
