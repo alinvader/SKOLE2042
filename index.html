@@ -9,11 +9,13 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap"
     rel="stylesheet"
-  />
+    <link rel="stylesheet" href="style.css">
+
+  
   <title>Button</title>
   <style>
     body {
-      background-color: #3d3c3c;
+      background-color: #003e34;
       text-align: center;
       padding-top: 100px;
     }
@@ -35,44 +37,20 @@
     }
   </style>
   <body>
-    <h1 style="color: aqua">OPERATING SYSTEM</h1>
-    <h2 style="color: aqua">Comparison</h2>
-    <button id="windowsButton">Windows</button>
-    <button id="appleButton">Apple</button>
-    <button id="linuxButton">Linux</button>
 
-    <ul id="windowsList" style="display: none; color: white">
-      <li>Windows 7</li>
-      <li>Windows 8</li>
-      <li>Windows 10</li>
-    </ul>
-    <ul id="appleList" style="display: none; color: white">
-      <li>Mac OS X</li>
-      <li>Mac OS Sierra</li>
-      <li>Mac OS Ventura</li>
-    </ul>
-    <ul id="linuxList" style="display: none; color: white">
-      <li>Ubuntu</li>
-      <li>Fedora</li>
-      <li>Debian</li>
-    </ul>
+    <div class="dropdown">
+    <button class="os-button">Windows</button>
+    <button class="os-button">Linux</button>
+    <div class="windows-list">
+        <h3>Ghost Spectre</h3>
+        <button>Windows 10</button>
+        <button>Windows 11</button>
+    <div class="Linux-list">
+        <h3>Bazzite</h3>
+        <button>Fedora</button>
 
-    <script>
-      function toggleButton(buttonId, targetId) {
-        const selectedButton = document.getElementById(buttonId);
-        const selectedList = document.getElementById(targetId);
-        selectedButton.addEventListener("click", function () {
-          if (selectedList.style.display === "none") {
-            selectedList.style.display = "block";
-          } else {
-            selectedList.style.display = "none";
-          }
-        });
-      }
-      toggleButton("windowsButton", "windowsList");
-      toggleButton("appleButton", "appleList");
-      toggleButton("linuxButton", "linuxList");
-    </script>
+    </div>
+</div>
   </body>
 </html>
  
