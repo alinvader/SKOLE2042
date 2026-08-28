@@ -69,3 +69,41 @@ h2 {
 .dropdown:hover .windows-list {
     display: block;
 }
+
+/* Linux container */
+.linux-dropdown {
+  position: relative;
+}
+
+/* Popup on the RIGHT of Linux */
+.linux-list {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 10px);
+
+  width: 300px;
+  padding: 20px;
+
+  background-color: #003e34;
+  border: 2px solid #00f5d4;
+  border-radius: 15px;
+
+  box-shadow:
+    0 0 10px #00ffc8,
+    0 0 30px #00ffc8;
+
+  display: none;
+}
+
+/* Popup title */
+.linux-list h3 {
+  margin: 5px 0 20px;
+  color: #00f5d4;
+  font-family: Georgia, serif;
+  font-size: 26px;
+}
+
+/* CachyOS button */
+.linux-list button {
+  width: 100%;
+}
