@@ -1,109 +1,116 @@
-@font-face {
-  font-family: "ModernRegular";
-  src: url("/fonts/font2042/ModernRegular.ttf") format("truetype");
-  font-weight: Regular;
-  font-style: Regular;
-}
-
-h1 {
-  font-family: "ModernRegular", sans-serif;
+* {
+    box-sizing: border-box;
 }
 
 body {
-  background-image: url("images/background2042.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+    margin: 0;
+
+    background-color: #003e34;
+
+    text-align: center;
+
+    padding-top: 157px;
 }
 
-h2 {
-  font-family: "ModernRegular", sans-serif;
-}
 
+/* Put Windows and Linux beside each other */
 .dropdown {
+    display: flex;
+    gap: 8px;
+
+    justify-content: center;
+}
+
+
+/* Each button gets its OWN popup */
+.os {
     position: relative;
-    display: inline-block;
 }
 
-.windows-list {
-    display: none;
-    position: absolute;
-    right: 100%;
-    top: 0;
-    margin-right: 15px;
 
-    width: 200px;
-    padding: 15px;
+/* Windows / Linux buttons */
+.os-button {
+    width: 216px;
+    height: 76px;
 
-    background: #003f36;
-    border: 2px solid #00ffe1;
+    background-color: transparent;
+
+    border: 3px solid #05e4b3;
     border-radius: 10px;
-    box-shadow: 0 0 15px #00ffe1;
 
-    z-index: 10;
-}
+    color: #04f1be;
 
-.windows-list h3 {
-    color: #00ffe1;
-    margin-top: 0;
-}
+    font-size: 29px;
 
-.windows-list button {
-    display: block;
-    width: 100%;
-    margin: 8px 0;
-    padding: 10px;
-
-    background: transparent;
-    color: #00ffe1;
-    border: 1px solid #00ffe1;
-    border-radius: 5px;
     cursor: pointer;
+
+    box-shadow:
+        0 0 8px #00ffc8,
+        0 0 20px rgba(0, 255, 200, 0.4);
 }
 
-.windows-list button:hover {
-    background: #00ffe1;
-    color: #003f36;
+
+/* Common popup style */
+.popup {
+    position: absolute;
+    top: 85px;
+    width: 350px;
+    padding: 20px;
+    background-color: #003e34;
+    border: 3px solid #05e4b3;
+    border-radius: 15px;
+    box-shadow:
+        0 0 10px #00ffc8,
+        0 0 30px rgba(0, 255, 200, 0.4);
+
+    display: none;
 }
 
-.dropdown:hover .windows-list {
+/* Windows popup position */
+.windows-list {
+    right: 224px;
+    top: 0;
+}
+
+.linux-list {
+    left: 224px;
+    top: 0;
+}
+/* Show popup */
+.popup.show {
     display: block;
 }
 
-/* Linux container */
-.linux-dropdown {
-  position: relative;
-}
-
-/* Popup on the RIGHT of Linux */
-.linux-list {
-  position: absolute;
-  top: 0;
-  left: calc(100% + 10px);
-
-  width: 300px;
-  padding: 20px;
-
-  background-color: #003e34;
-  border: 2px solid #00f5d4;
-  border-radius: 15px;
-
-  box-shadow:
-    0 0 10px #00ffc8,
-    0 0 30px #00ffc8;
-
-  display: none;
-}
 
 /* Popup title */
-.linux-list h3 {
-  margin: 5px 0 20px;
-  color: #00f5d4;
-  font-family: Georgia, serif;
-  font-size: 26px;
+.popup h3 {
+    color: #04f1be;
+
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    margin-top: 5px;
 }
 
-/* CachyOS button */
-.linux-list button {
-  width: 100%;
+
+/* Popup buttons */
+.popup button {
+    width: 300px;
+    height: 66px;
+
+    margin: 6px;
+
+    background-color: transparent;
+
+    border: 2px solid #05e4b3;
+    border-radius: 8px;
+
+    color: #04f1be;
+
+    font-size: 27px;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 8px #00ffc8;
 }
