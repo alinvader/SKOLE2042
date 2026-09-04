@@ -1,57 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>2042</title>
-  </head>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap"
-    rel="stylesheet"
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
 
-  
-  <title>Button</title>
-  <style>
-    body {
-      background-color: #003e34;
-      text-align: center;
-      padding-top: 100px;
-    }
-    button {
-      background-color: transparent;
-      border: 2px solid #05e4b3;
-      color: #04f1be;
-      font-size: 20px;
-      padding: 12px 30px;
-      cursor: pointer;
-      border-radius: 6px;
-      transition: 0.3s;
-      box-shadow: 0 0 8px #00ffc8;
-    }
-    button:hover {
-      background-color: #018a6c;
-      color: #0b0e11;
-      box-shadow: 0 0 20px #00ffc8, 0 0 40px #00ffc8;
-    }
-  </style>
-  <body>
+    <title>2042</title>
+</head>
+
+<body>
 
     <div class="dropdown">
-    <button class="os-button">Windows</button>
-    <button class="os-button">Linux</button>
-    <div class="windows-list">
-        <h3>Ghost Spectre</h3>
-        <button>Windows 10</button>
-        <button>Windows 11</button>
-    <div class="Linux-list">
-        <h3>Bazzite</h3>
-        <button>Fedora</button>
+
+        <!-- WINDOWS -->
+        <div class="os">
+            <button class="os-button" onclick="toggleWindows()">
+                Windows
+            </button>
+
+            <div class="popup windows-list" id="windowsList">
+
+                <h3>Ghost Spectre</h3>
+
+                <button>Windows 10</button>
+                <button>Windows 11</button>
+
+            </div>
+        </div>
+
+
+        <!-- LINUX -->
+        <div class="os">
+            <button class="os-button" onclick="toggleLinux()">
+                Linux
+            </button>
+
+            <div class="popup linux-list" id="linuxList">
+
+                <h3>Bazzite</h3>
+
+                <button>CashyOS</button>
+
+            </div>
+        </div>
 
     </div>
-</div>
-  </body>
+
+
+    <script>
+
+        function toggleWindows() {
+
+            document
+                .getElementById("windowsList")
+                .classList.toggle("show");
+
+        }
+
+
+        function toggleLinux() {
+
+            document
+                .getElementById("linuxList")
+                .classList.toggle("show");
+
+        }
+
+    </script>
+
+</body>
+
 </html>
- 
- 
