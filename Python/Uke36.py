@@ -40,14 +40,16 @@ print(total)
 
 #Steg 4: input lar brukeren skrive inn en verdi
 #input() stopper programmet og venter på at brukeren skriver noe. Først bruker vi input bare som tekst.
-navn = input("Hva heter du? ")
-print("Hei", navn)
 #-----------------------------------------------------------------
 
 #Oppgave 3: spør etter navn og bosted
 print("Hva heter du?")
 navn = input()
 
-print("Hva heter du? ")
+print("Hvor bor du? ")
 bosted = input()
-print(navn, "bor i", bosted)
+
+print("Hvor lenge har du vært i Norge? ")
+periode = input()
+
+print(navn, "bor i", bosted, "og har vært", periode)
